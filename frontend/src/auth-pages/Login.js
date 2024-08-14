@@ -33,7 +33,7 @@ const Login = () => {
 
 
     try {
-      const response = await fetch('https://codsoft-eccomerce-website-backend2.onrender.com/auth/', {
+      const response = await fetch('https://localhost:5000/auth/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
