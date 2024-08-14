@@ -251,7 +251,7 @@ const Flash = () => {
   
   const sendItemsToBackend = useCallback(async () => {
     try {
-        const { data: existingItems } = await axios.get('https://codsoft-eccomerce-website-backend2.onrender.com/products');
+        const { data: existingItems } = await axios.get('https://localhost:5000/products');
 
         // Create a set of existing item names and prices
         const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
@@ -261,7 +261,7 @@ const Flash = () => {
         for (const item of items) {
             const itemNameAndPrice = `${item.name},${item.price}`;
             if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
-                const response = await axios.post('https://codsoft-eccomerce-website-backend2.onrender.com/products', item);
+                const response = await axios.post('https://localhost:5000/products', item);
                 console.log('Item sent to backend:', response.data);
             } else {
                 allItemsSent = false;

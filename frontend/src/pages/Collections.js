@@ -510,7 +510,7 @@ const Collections = () => {
         for (const item of items) {
             const itemNameAndPrice = `${item.name},${item.price}`;
             if (!existingItemNamesAndPrices.has(itemNameAndPrice)) {
-                const response = await axios.post('https://codsoft-eccomerce-website-backend2.onrender.com/products', item);
+                const response = await axios.post('https://localhost:5000/products', item);
                 console.log('Item sent to backend:', response.data);
             } else {
                 allItemsSent = false;
