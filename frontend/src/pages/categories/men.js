@@ -251,7 +251,7 @@ const Men = () => {
   
   const sendItemsToBackend = useCallback(async () => {
     try {
-        const { data: existingItems } = await axios.get('https://codsoft-eccomerce-website-backend2.onrender.com/products');
+        const { data: existingItems } = await axios.get('https://localhost:5000/products');
 
         // Create a set of existing item names and prices
         const existingItemNamesAndPrices = new Set(existingItems.map(item => `${item.name},${item.price}`));
