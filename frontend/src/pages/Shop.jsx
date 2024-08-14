@@ -1,11 +1,11 @@
 import React, { useState} from 'react';
 import './Shop.scss';
-import Men from '../pages/categories/men';
-import Women from '../pages/categories/women';
-import Kids from '../pages/categories/kids';
-import Accessories from '../pages/categories/accessories';
-import Shoes from '../pages/categories/shoes';
-import Flash from '../pages/categories/Flash';
+import Men from './categories/men';
+import Women from './categories/women';
+import Kids from './categories/kids';
+import Accessories from './categories/accessories';
+import Shoes from './categories/shoes';
+import Flash from './categories/Flash';
 import Clicking from '../images/webp/women/pic.webm';
 import Footer from '../components/Footer';
 import Nav from '../components/Navbar';
